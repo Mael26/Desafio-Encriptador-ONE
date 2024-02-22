@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
     <head>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Desafio Encriptador de Texto</title>
+        
+        <link rel="stylesheet" href="reset.css">
         <link  rel="stylesheet" href="style.css"/>
     </head>
+
     <body>
+        <header>
+            <div>
+                <h1><img src="/Recursos/Logo.jpg" alt="Logotipo de Alura latam"></h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="contenedor">
+                <div class="inputContainer">
+                    <div class="campoTexto">
+                        <textarea cols="100" rows="45" id="mensaje" class="input-padron" required></textarea>
+
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <p>Solo letras minúsculas y sin acentos</p>
+                            </li>
+                            </ul>
+                    </div>
+                    <div class="cajaBotones">
+                        <ul>
+                            <li><button>Encriptar</button></li>
+                            <li><button>Desencriptar</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="outputContainer">
+                    <p>Respuesta</p>
+                </div>
+            </div>
+
+        </main>
 
     </body>
-
-
 </html>

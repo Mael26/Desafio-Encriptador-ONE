@@ -1,0 +1,60 @@
+header{
+    padding: 40px 0 0 40px;
+}
+
+.contenedor{
+    width: auto;
+    margin: 2% 2% 2% 5%;
+    display: flex;
+}
+
+.inputContainer{
+    width: 70%;
+    margin: 30px;
+}
+
+.campoTexto{
+    width: max-content;
+    margin: 0 auto;
+}
+
+.campoTexto ul{
+    display: flex;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.campoTexto li{
+    margin: 0 5px;
+}
+
+.campoTexto p{
+    font-size: .9em;
+    color: dimgray;
+}
+
+.cajaBotones{
+    width: max-content;
+    margin: 0 auto;
+}
+
+.cajaBotones ul{
+    display: flex;
+    list-style: none;
+}
+
+.cajaBotones li{
+    padding: 0 20px;
+}
+
+.outputContainer{
+    width: 30%;
+    margin: 30px;
+    border: 1px;
+}
+
+.outputContainer p{
+    text-align: center;
+    font-weight: bold;
+
+}
