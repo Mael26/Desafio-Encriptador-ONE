@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 
 <html lang="es">
-
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Desafio Encriptador de Texto</title>
-        
-        <link rel="stylesheet" href="reset.css">
-        <link  rel="stylesheet" href="style.css"/>
+        <link rel="icon" href="/Recursos/Logo_icono.png" type="image/x-icon"
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel=""
     </head>
-
     <body>
-        <header>
-            <div>
-                <h1><img src="/Recursos/Logo.jpg" alt="Logotipo de Alura latam"></h1>
-            </div>
-        </header>
-
         <main>
             <div class="contenedor">
+                <div class="icon">
+                    <h1><img src="/Recursos/Logo_azul.jpg" alt="Logotipo de Alura latam"></h1>
+                </div>
                 <div class="inputContainer">
                     <div class="campoTexto">
-                        <textarea cols="100" rows="45" id="mensaje" class="input-padron" required></textarea>
-
-                        <ul>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <p>Solo letras minúsculas y sin acentos</p>
-                            </li>
-                            </ul>
+                        <textarea id="mensaje" class="cuadroTexto" placeholder="Ingresa el texto" spellcheck="false"></textarea>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                            </svg> Solo letras minúsculas y sin acentos
+                        </p>
                     </div>
                     <div class="cajaBotones">
                         <ul>
-                            <li><button>Encriptar</button></li>
-                            <li><button>Desencriptar</button></li>
+                            <li><button onclick="botonEncriptar();" class="encriptar"><span class="text">Encriptar</span></button></li>
+                            <li><button onclick="botonDesencriptar();" class="desencriptar"><span class="text">Desencriptar</span></button></li>
                         </ul>
                     </div>
                 </div>
                 <div class="outputContainer">
-                    <p>Respuesta</p>
+                    <div class="noData">
+                        <ul>
+                            <li>
+                                <img src="/Recursos/Muñeco.jpg" alt="No Data">
+                            </li>
+                            <li>
+                                <textarea id="noMensaje" readonly>Ningún mensaje fue encontrado</textarea>
+                            </li>
+                            <li>
+                                <textarea id="ingresaTexto" readonly>Ingresa el texto que desees encriptar o desencriptar</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="botonCopiar">
+                        <button class="copiar">Copiar</button>
+                    </div>
                 </div>
             </div>
-
         </main>
+        <footer>
+            <p><i class="fas fa-frog"></i>&#x1F353  Codigo realizado por Mael &#x1F353<i class="fas fa-frog"></i></p>
+        </footer>
+
+
+        <script src="encriptador.js" defer></script>
 
     </body>
 </html>
