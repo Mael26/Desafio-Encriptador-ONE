@@ -36,7 +36,7 @@
                     <div class="noData">
                         <ul>
                             <li>
-                                <img src="/Recursos/Muñeco.jpg" alt="No Data">
+                                <img id="muneco" src="/Recursos/Muñeco.jpg" alt="No Data">
                             </li>
                             <li>
                                 <textarea id="noMensaje" readonly>Ningún mensaje fue encontrado</textarea>
@@ -46,8 +46,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="botonCopiar">
-                        <button class="copiar">Copiar</button>
+                    <div class="botonCopiar" id="botonCopiar">
+                        <button class="copiar" onclick="copiar(this)">Copiar</button>
                     </div>
                 </div>
             </div>

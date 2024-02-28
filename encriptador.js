@@ -19,7 +19,6 @@ esCorrecto(texto) ? desencripta(texto) : alert('incorrecto');
 
 function encripta(texto){
     texto = texto.split("");
-    console.log(texto);
     for(let i = 0; i < texto.length; i++){
         switch (texto[i]){
             case 'a':
@@ -42,12 +41,30 @@ function encripta(texto){
                 break;
         }
     }
-    console.log(texto)
+    mostrarTexto(texto);
 }
 
 function desencripta(texto){
 
 }
+
+function mostrarTexto(texto){
+    texto = texto.join("");
+    let img = document.getElementById('muneco');
+    img.setAttribute('hidden', 'hidden');
+    document.getElementById('ingresaTexto').setAttribute('hidden', 'hidden');
+    let textoAnterior = document.getElementById('noMensaje');
+    textoAnterior.style.height = 700 + 'px';
+    textoAnterior.innerHTML = texto;
+    document.getElementById('botonCopiar').style.display = 'block';
+}
+
+let copiar = async () => {
+    let textoCopiado = document.getElementById('noMensaje').innerHTML;
+    await navigator.clipboard.writeText(textoCopiado);
+}
+
+
 
 function esCorrecto(texto){
     return true;

@@ -178,6 +178,7 @@ height: 95.6%;
 }
 
 #noMensaje{
+    height: auto;
     border: none;
     resize: none;
     font-size:xx-large;
@@ -205,6 +206,7 @@ height: 95.6%;
     left: 0;
     margin: auto;
     place-self: center;
+    display: none;
 }
 
 .copiar {
