@@ -1,20 +1,46 @@
+let popup = document.getElementById('advertenciaPopup');
 
 
+
+popup.addEventListener('click', function(){
+        if(window.getComputedStyle(popup, null).getPropertyValue('display') == 'block'){
+            popup.classList.remove('show');
+        }
+});
 
 function botonEncriptar(){
     //Obtenemos el texto a encriptar
     let texto = document.getElementById('mensaje').value;
     //verificamos que el input sea correcto, en caso de serlo lo mandamos a una funcion para que realice  la operacion y nos devuelva el resultado
     //En caso contrario mostramos una alerta para que el usuario revise la entrada
-    esCorrecto(texto) ? encripta(texto): alert('incorrecto')
+    esCorrecto(texto) ? encripta(texto): mostrarError();
 }
 
 function botonDesencriptar(){
-//Obtenemos el texto a desencriptar
-let texto = document.getElementById('mensaje').value;
-//verificamos que el input sea correcto, en caso de serlo lo mandamos a una funcion para que realice  la operacion y nos devuelva el resultado
-//En caso contrario mostramos una alerta para que el usuario revise la entrada
-esCorrecto(texto) ? desencripta(texto) : alert('incorrecto');
+    //Obtenemos el texto a desencriptar
+    let texto = document.getElementById('mensaje').value;
+    //verificamos que el input sea correcto, en caso de serlo lo mandamos a una funcion para que realice  la operacion y nos devuelva el resultado
+    //En caso contrario mostramos una alerta para que el usuario revise la entrada
+    esCorrecto(texto) ? desencripta(texto) : alert('incorrecto');
+}
+
+function esCorrecto(texto){
+    let flag = true;
+    checkUppercase(texto) || texto.normalize('NFD').search(/[\u0300-\u036f]/i) != -1 ? flag = false : flag = true; 
+    return flag;
+}
+
+function checkUppercase(str){
+    for (var i=0; i<str.length; i++){
+      if (str.charAt(i) == str.charAt(i).toUpperCase() && str.charAt(i).match(/[a-z]/i)){
+        return true;
+      }
+    }
+    return false;
+};
+
+function mostrarError(){
+    popup.classList.add('show');
 }
 
 function encripta(texto){
@@ -85,6 +111,3 @@ let copiar = async () => {
 
 
 
-function esCorrecto(texto){
-    return true;
-}
