@@ -64,7 +64,6 @@ height: 95.6%;
     height: 10%;
     width: 100%;
     position: absolute;
-    bottom: 0;
     margin: 0 auto;
 }
 
@@ -324,3 +323,102 @@ footer p{
     font: 1em sans-serif;
     color: #FFFFFF;
 }
+
+@media only screen and (max-width: 540px) {
+
+    body{
+        height: 100%;
+    }
+    h1{
+        margin-bottom: 0;
+    }
+    .contenedor{
+        display: block;
+        position: relative;
+    }
+
+    .inputContainer{
+        height: 50%;
+        padding-bottom: 0;
+        margin: 0 0;
+    }
+
+    .cuadroTexto{
+        margin-top: 0;
+        font-size: 30px;
+        height: 70%;
+    }
+
+    .campoTexto{
+        height: 80%;
+    }
+
+    .campoTexto p{
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    
+    .cajaBotones{
+        
+        justify-content: center;
+    }
+    .cajaBotones li{
+        padding: 5px 60px;
+        margin: 0 auto;
+    }
+    .cajaBotones ul{
+        
+        display: block;
+        margin-top: 0;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 1280px){
+    .body{
+        height: 100%;
+    }
+    .contenedor{
+        display: block;
+        position: relative;
+    }
+    .inputContainer{
+        height: 55%;
+        width: 100%;
+        padding: 0 0 20px 0;
+    }
+    .cuadroTexto{
+        width: 100%;
+    }
+    .outputContainer{
+        position: absolute;
+        margin: 20px 0 0 0;
+        height: 29%;
+        width: 100%;
+        bottom: 0;
+        background-color: #EFF1FA;
+    }
+    .noData{
+        width: 90%;
+        align-items: start;
+    }
+    .noData ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .noData img{
+        display: none;
+    }
+    #noMensaje{
+        width: 700px;
+    }
+}
+

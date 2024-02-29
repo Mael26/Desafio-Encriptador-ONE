@@ -21,7 +21,7 @@ function botonDesencriptar(){
     let texto = document.getElementById('mensaje').value;
     //verificamos que el input sea correcto, en caso de serlo lo mandamos a una funcion para que realice  la operacion y nos devuelva el resultado
     //En caso contrario mostramos una alerta para que el usuario revise la entrada
-    esCorrecto(texto) ? desencripta(texto) : alert('incorrecto');
+    esCorrecto(texto) ? desencripta(texto) : mostrarError();
 }
 
 function esCorrecto(texto){
@@ -77,7 +77,6 @@ function desencripta(texto){
             ||texto[i].includes('ober') || texto[i].includes('ufat')) {
             texto[i] = change(texto[i]) + ' ';
         }
-    console.log(texto)
     mostrarTexto(texto);
     }
 }
