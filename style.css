@@ -2,17 +2,18 @@
 html, body{
     background-color: #EFF1FA;
     margin: 0;
-    height: 99%;
+    height: 100%;
+    width: 100%;
 }
 
 main{
 width: auto;
-height: 95.6%;
+height: 96%;
 }
 .contenedor{
     width:auto;
     height: 100%;
-    margin: 1% 1% 2% 1%;
+    margin:0 ;
     display: flex;
 
 }
@@ -23,8 +24,9 @@ height: 95.6%;
 .inputContainer{
     width: 60%;
     height: 99%;
-    margin: 10px;
+    margin: 0 10px;
     position:  relative;
+    display: flex;
 }
 
 .campoTexto{
@@ -58,6 +60,8 @@ height: 95.6%;
 .campoTexto p{
     font-size: .9em;
     color: dimgray;
+    margin-top: 2px;
+    margin-bottom: 0;
 }
 
 .cajaBotones{
@@ -65,6 +69,7 @@ height: 95.6%;
     width: 100%;
     position: absolute;
     margin: 0 auto;
+    bottom: 0;
 }
 
 .cajaBotones ul{
@@ -308,20 +313,24 @@ height: 95.6%;
 
 
 footer{
-    height: 2.23%;
-    display: flex;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2%;
     background-color: rgb(5, 6, 45);
-    justify-content: center;
-    align-items: center;
     font-size: .8em;
     letter-spacing: 2px;
     font-weight: bold;
     padding: 1rem;
+    position: absolute;
+    text-align: center;
 }
 
 footer p{
     font: 1em sans-serif;
     color: #FFFFFF;
+    
 }
 
 @media only screen and (max-width: 540px) {
@@ -376,14 +385,17 @@ footer p{
         position: absolute;
         bottom: 0;
         width: 100%;
+        left: 0;
+        right: 0;
     }
 
 
 }
 
 @media only screen and (max-width: 1280px){
-    .body{
+    html,.body{
         height: 100%;
+        width: 100%;
     }
     .contenedor{
         display: block;
